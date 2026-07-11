@@ -1,0 +1,220 @@
+@use '../../styles/variables' as *;
+
+.catalog {
+  background: $pink-red;
+  padding-block: $section-padding;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    color: $cream;
+    margin-bottom: 0.75rem;
+  }
+
+  &__subtitle {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba($cream, 0.7);
+    margin: 0;
+  }
+
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    align-items: flex-end;
+  }
+
+  &__search {
+    flex: 1 1 280px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba($white, 0.06);
+    border: 1px solid rgba($white, 0.15);
+    padding: 0.75rem 1rem;
+    color: rgba($cream, 0.5);
+
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: $font-sans;
+      font-size: 0.9rem;
+      color: $cream;
+
+      &::placeholder {
+        color: rgba($cream, 0.45);
+      }
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 180px;
+
+    label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba($cream, 0.55);
+    }
+
+    select {
+      appearance: none;
+      background: rgba($white, 0.06)
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23f5f0eb' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")
+        no-repeat right 0.75rem center;
+      border: 1px solid rgba($white, 0.15);
+      color: $cream;
+      font-family: $font-sans;
+      font-size: 0.9rem;
+      padding: 0.75rem 2rem 0.75rem 1rem;
+      cursor: pointer;
+      outline: none;
+
+      option {
+        background: #231815;
+        color: $cream;
+      }
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    font-family: $font-serif;
+    font-style: italic;
+    color: rgba($cream, 0.6);
+    padding: 3rem 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  &__card {
+    background: rgba($white, 0.04);
+    border: 1px solid rgba($white, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, transform 0.2s;
+
+    &:hover {
+      border-color: rgba($burgundy, 0.5);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+
+    .catalog__card:hover & {
+      transform: scale(1.04);
+    }
+  }
+
+  &__region {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba($burgundy, 0.9);
+    color: $white;
+    padding: 0.3rem 0.6rem;
+  }
+
+  &__body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__subtitle-product {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $peach;
+    margin-bottom: 0.25rem;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    color: $cream;
+    margin-bottom: 0.5rem;
+  }
+
+  &__desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba($cream, 0.65);
+    margin: 0 0 1.25rem;
+    flex: 1;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+  }
+
+  &__price {
+    font-family: $font-serif;
+    font-size: 1.15rem;
+    color: $cream;
+  }
+
+  &__buy {
+    font-size: 0.65rem;
+    padding: 0.6rem 1rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 540px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__footer {
+      flex-direction: column;
+      align-items: stretch;
+
+      .catalog__buy {
+        width: 100%;
+      }
+    }
+  }
+}

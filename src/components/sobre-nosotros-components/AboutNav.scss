@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+
+.about-nav {
+  position: sticky;
+  top: 3.5rem;
+  z-index: 50;
+  background: rgba($cream, 0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba($olive-light, 0.15);
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1.5rem;
+    padding-block: 0.85rem;
+  }
+
+  &__link {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $olive-dark;
+    padding: 0.35rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: $burgundy;
+      border-bottom-color: $burgundy;
+    }
+  }
+
+  @media (max-width: 600px) {
+    top: 3.25rem;
+
+    &__inner {
+      gap: 0.5rem 1rem;
+    }
+
+    &__link {
+      font-size: 0.65rem;
+    }
+  }
+}

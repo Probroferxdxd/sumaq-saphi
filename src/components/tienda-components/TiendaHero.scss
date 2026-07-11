@@ -1,0 +1,119 @@
+@use '../../styles/variables' as *;
+
+.tienda-hero {
+  position: relative;
+  min-height: 88vh;
+  background: #1a1210;
+  padding-top: 5rem;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(105deg, rgba(26, 18, 16, 0.97) 0%, rgba(26, 18, 16, 0.75) 45%, rgba(26, 18, 16, 0.2) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    min-height: calc(88vh - 5rem);
+    gap: 2rem;
+  }
+
+  &__content {
+    padding-block: 3rem;
+  }
+
+  &__eyebrow {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba($white, 0.7);
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: $white;
+    margin-bottom: 2rem;
+    max-width: 480px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba($white, 0.6);
+  }
+
+  &__line {
+    width: 2rem;
+    height: 1px;
+    background: rgba($white, 0.4);
+  }
+
+  &__visual {
+    position: relative;
+    height: 100%;
+    min-height: 420px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  }
+
+  &__bag {
+    position: absolute;
+    top: 5.5rem;
+    right: 2rem;
+    z-index: 3;
+    color: rgba($white, 0.7);
+  }
+
+  @media (max-width: 900px) {
+    min-height: auto;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    &__visual {
+      order: -1;
+      min-height: 280px;
+      max-height: 360px;
+    }
+
+    &__image {
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    }
+
+    &__bag {
+      top: 5rem;
+      right: 1.25rem;
+    }
+  }
+}

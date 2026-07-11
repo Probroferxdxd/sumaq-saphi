@@ -1,0 +1,210 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: $footer-bg;
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+
+  &__support {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: clamp(1.4rem, 2.4vw, 1.9rem) clamp(1.25rem, 2.5vw, 2rem);
+    background: rgba($peach, 0.16);
+    border: 1px solid rgba($peach, 0.28);
+    border-radius: 1rem;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+  }
+
+  &__support-copy {
+    flex: 1;
+  }
+
+  &__support-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $peach;
+    margin-bottom: 0.5rem;
+  }
+
+  &__support h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    color: $cream;
+    margin-bottom: 0.5rem;
+  }
+
+  &__support p {
+    margin: 0;
+    color: rgba($cream, 0.85);
+    line-height: 1.6;
+  }
+
+  &__support-btn {
+    flex-shrink: 0;
+    background: $cream;
+    color: $burgundy;
+    border-color: $cream;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  &__logo {
+    font-family: $font-serif;
+    font-size: 1.75rem;
+    color: $cream;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tagline {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba($cream, 0.85);
+    margin: 0 0 0.75rem;
+  }
+
+  &__accent {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $peach;
+  }
+
+  &__heading {
+    font-family: $font-sans;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $peach;
+    margin-bottom: 1.25rem;
+  }
+
+  &__col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    a {
+      font-family: $font-serif;
+      font-size: 0.9rem;
+      color: rgba($cream, 0.85);
+      transition: color 0.2s;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__newsletter p {
+    font-family: $font-serif;
+    font-size: 0.85rem;
+    color: rgba($cream, 0.85);
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($cream, 0.35);
+    padding-bottom: 0.35rem;
+
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: $font-serif;
+      font-size: 0.9rem;
+      color: $cream;
+      padding: 0.25rem 0;
+
+      &::placeholder {
+        color: rgba($cream, 0.5);
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: $cream;
+      cursor: pointer;
+      padding: 0.25rem;
+      display: flex;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-block: 1.25rem;
+    border-top: 1px solid rgba($cream, 0.12);
+
+    p {
+      font-size: 0.75rem;
+      color: rgba($cream, 0.6);
+      margin: 0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1.25rem;
+
+    a {
+      font-size: 0.75rem;
+      color: rgba($cream, 0.6);
+      transition: color 0.2s;
+
+      &:hover {
+        color: $cream;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__support {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

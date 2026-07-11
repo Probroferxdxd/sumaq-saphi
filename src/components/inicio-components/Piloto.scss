@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.piloto {
+  background: $green;
+  padding-block: $section-padding;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  &__title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    color: $white;
+    margin-bottom: 1.25rem;
+  }
+
+  &__intro {
+    font-family: $font-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba($white, 0.92);
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    li {
+      font-family: $font-serif;
+      font-size: 0.95rem;
+      color: $white;
+      padding-left: 1.25rem;
+      position: relative;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: rgba($white, 0.7);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__image-wrap {
+      max-width: 420px;
+      margin-inline: auto;
+    }
+  }
+}
