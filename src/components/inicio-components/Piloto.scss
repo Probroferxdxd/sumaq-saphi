@@ -11,11 +11,17 @@
     align-items: center;
   }
 
-  &__image {
+  &__image-wrap {
     width: 100%;
+    height: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: left center;
+    .image-element{
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/imagenes/esencia.jpg") center center / cover no-repeat;
+    }
   }
 
   &__title {

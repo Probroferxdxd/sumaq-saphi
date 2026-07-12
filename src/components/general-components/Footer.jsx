@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import './Footer.scss'
 
@@ -23,17 +24,47 @@ const social = [
 ]
 
 export default function Footer() {
+  const [donationAmount, setDonationAmount] = useState('')
+
+  const handleDonate = (event) => {
+    event.preventDefault()
+
+    const amount = donationAmount.trim()
+    if (!amount) return
+
+    const message = encodeURIComponent(`Hola Sumaq Saphi, quiero apoyar el proyecto con S/${amount}.`)
+    window.location.href = `mailto:contacto@sumaqsaphi.com?subject=Apoyo%20al%20proyecto%20Sumaq%20Saphi&body=${message}`
+  }
+
   return (
     <footer id="apoyanos" className="footer">
       <div className="container footer__support">
         <div className="footer__support-copy">
           <p className="footer__support-eyebrow">Apóyanos</p>
           <h3>Tu apoyo ayuda a que la belleza peruana siga floreciendo con propósito.</h3>
-          <p>Cada compra y cada gesto de confianza impulsa a Sumaq Saphi a cuidar nuestras raíces y compartirlas con el mundo.</p>
+          <p>Ingresa un monto y envíanos tu aporte para impulsar este proyecto.</p>
         </div>
-        <a href="#tienda" className="btn btn--white footer__support-btn">
-          Descubrir productos
-        </a>
+
+        <form className="footer__donation" onSubmit={handleDonate}>
+          <label className="footer__donation-label" htmlFor="donation-amount">
+            Monto en soles
+          </label>
+          <div className="footer__donation-row">
+            <span className="footer__currency">S/</span>
+            <input
+              id="donation-amount"
+              type="number"
+              min="1"
+              step="0.01"
+              placeholder="100"
+              value={donationAmount}
+              onChange={(event) => setDonationAmount(event.target.value)}
+            />
+            <button type="submit" className="btn footer__support-btn">
+              Donar ahora
+            </button>
+          </div>
+        </form>
       </div>
 
       <div className="container footer__grid">

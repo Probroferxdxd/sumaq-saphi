@@ -22,13 +22,6 @@ export default function TiendaHero() {
             Nuestra tienda
           </div>
         </div>
-        <div className="tienda-hero__visual" aria-hidden="true">
-          <img
-            src="/images/tienda-hero.png"
-            alt=""
-            className="tienda-hero__image"
-          />
-        </div>
       </div>
       <div className="tienda-hero__bag">
         <ShoppingBag size={22} strokeWidth={1.5} />

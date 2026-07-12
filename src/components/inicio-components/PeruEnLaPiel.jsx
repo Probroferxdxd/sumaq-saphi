@@ -18,11 +18,7 @@ export default function PeruEnLaPiel() {
           </p>
         </div>
         <div className="peru-piel__image-wrap">
-          <img
-            src="/images/peru-piel.jpg"
-            alt="Manos sosteniendo un frasco de crema natural Sumaq Saphi"
-            className="peru-piel__image"
-          />
+          <div className="image-element"></div>
         </div>
       </div>
     </section>

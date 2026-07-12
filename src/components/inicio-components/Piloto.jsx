@@ -11,11 +11,7 @@ export default function Piloto() {
     <section id="piloto" className="piloto">
       <div className="container piloto__grid">
         <div className="piloto__image-wrap">
-          <img
-            src="/images/piloto.jpg"
-            alt="Ingredientes nativos peruanos: maíz morado, cacao y semillas"
-            className="piloto__image"
-          />
+          <div className="image-element"></div>
         </div>
         <div className="piloto__text">
           <h2 className="piloto__title">Nuestro Piloto</h2>

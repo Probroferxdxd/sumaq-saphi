@@ -51,6 +51,14 @@
 
   &__image-wrap {
     position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: red;
+    .image-element{
+      background: url("../../assets/imagenes/persona\ maqullada-2.jpg") center center / cover no-repeat;
+      width: 100%;
+      height: 100%;
+    }
 
     &::before {
       content: '';

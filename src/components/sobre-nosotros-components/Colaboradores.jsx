@@ -1,15 +1,17 @@
 import './Colaboradores.scss'
+import divinaOlivia from '../../assets/imagenes/divina-olivia.jpg'
+import productorOriginario from '../../assets/imagenes/productor-originario.jpg'
 
 const collaborators = [
   {
-    image: '/images/colaboradora.jpg',
+    image: divinaOlivia,
     name: 'Divina Olivia',
     role: 'Directora Creativa',
     description:
       'Visionaria del maquillaje contemporáneo que fusiona las paletas de color de la sierra peruana con las tendencias más vanguardistas de París y Milán.',
   },
   {
-    image: '/images/productores.jpg',
+    image: productorOriginario,
     name: 'Productores Regionales',
     role: 'Guardianes de la Tierra',
     description:
@@ -30,7 +32,7 @@ export default function Colaboradores() {
         <div className="colaboradores__grid">
           {collaborators.map(({ image, name, role, description }) => (
             <article key={name} className="colaboradores__card">
-              <img src={image} alt={name} className="colaboradores__image" />
+              <div style={{ backgroundImage: `url(${image})` }} className="colaboradores__image" />
               <div className="colaboradores__body">
                 <h3 className="colaboradores__name">{name}</h3>
                 <span className="colaboradores__role">{role}</span>
