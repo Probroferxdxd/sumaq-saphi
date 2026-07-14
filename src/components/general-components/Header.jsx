@@ -4,11 +4,21 @@ import './Header.scss'
 const navLinks = [
   { label: 'Inicio', page: 'inicio' },
   { label: 'Sobre Nosotros', page: 'sobre-nosotros' },
+  { label: 'Historia', page: 'historia' },
   { label: 'Tienda', page: 'tienda' },
 ]
 
 export default function Header() {
   const { page } = usePage()
+
+  const handleNavClick = (event, linkPage) => {
+    event.preventDefault()
+    const targetHash = pageHref(linkPage)
+
+    if (window.location.hash !== targetHash) {
+      window.location.hash = targetHash
+    }
+  }
 
   return (
     <header className="header">
@@ -25,6 +35,7 @@ export default function Header() {
               <a
                 key={label}
                 href={href}
+                onClick={(event) => handleNavClick(event, linkPage)}
                 className={`header__link${isActive ? ' header__link--active' : ''}`}
                 aria-current={isActive ? 'page' : undefined}
               >

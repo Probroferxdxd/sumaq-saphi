@@ -4,6 +4,7 @@ import InicioPage from './pages/InicioPage'
 import SobreNosotrosPage from './pages/SobreNosotrosPage'
 import TiendaPage from './pages/TiendaPage'
 import ConfirmarCompraPage from './pages/ConfirmarCompraPage'
+import HistoriaPage from './pages/HistoriaPage'
 import { usePage } from './hooks/usePage'
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         {page === 'sobre-nosotros' && <SobreNosotrosPage />}
         {page === 'tienda' && <TiendaPage />}
         {page === 'inicio' && <InicioPage />}
+        {page === 'historia' && <HistoriaPage />}
       </main>
       <Footer />
     </>
