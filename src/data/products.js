@@ -1,66 +1,118 @@
+import labialRojo from '../assets/imagenes/labial-rojo.png'
+import labialMorado from '../assets/imagenes/labial-morado.png'
+import delineadorMorado from '../assets/imagenes/delineador-morado.png'
+import delineadorVerde from '../assets/imagenes/delineador-verde.png'
+import blushNaranja from '../assets/imagenes/blush-naranja.png'
+import glossRojo from '../assets/imagenes/gloss-rojo.png'
+import blushMorado from '../assets/imagenes/blush-morado.png'
+import lienzoCarnaval from '../assets/imagenes/lienzo-carnaval.png'
+
 export const REGIONS = ['Todas', 'Andes', 'Amazonía', 'Costa']
 
 export const products = [
   {
-    id: 'elixir-andes',
-    name: 'Elixir de los Andes',
-    subtitle: 'Quinta Andina',
+    id: 'petalo-rojo',
+    name: 'Petalo Rojo',
+    subtitle: 'Labial de Achote',
     description:
-      'Aceite facial restitutivo con extracto de maíz morado y rosa andina. Nutre profundamente y devuelve luminosidad natural.',
-    price: 89,
-    currency: 'S/',
-    region: 'Andes',
-    image: '/images/peru-piel.jpg',
-  },
-  {
-    id: 'labial-maiz-morado',
-    name: 'Labial Maíz Morado',
-    description:
-      'Color intenso con pigmentos naturales de maíz morado. Hidratación prolongada sin parabenos ni crueldad animal.',
+      'Color intenso con pigmentos naturales de achiote. Hidratación prolongada sin parabenos ni crueldad animal.',
+    details: 'Textura cremosa y de larga duración. Ideal para pieles secas que buscan un acabado natural y definido.',
+    ingredients: 'Achiote, cera de abejas, manteca de karité, aceite de jojoba.',
     price: 45,
     currency: 'S/',
     region: 'Andes',
-    image: '/images/piloto.jpg',
+    image: labialRojo,
   },
   {
-    id: 'crema-cacao',
-    name: 'Crema de Cacao Amazónico',
+    id: 'petalo-violeta',
+    name: 'Petalo Violeta',
+    subtitle: 'Labial de Maíz Morado',
     description:
-      'Textura sedosa enriquecida con manteca de cacao silvestre y aceites de castaña. Ideal para pieles secas y sensibles.',
-    price: 72,
-    currency: 'S/',
-    region: 'Amazonía',
-    image: '/images/tienda-hero.png',
-  },
-  {
-    id: 'serum-quinoa',
-    name: 'Sérum de Quinoa',
-    description:
-      'Concentrado antioxidante con proteína de quinoa y vitamina E. Fortalece la barrera cutánea y unifica el tono.',
-    price: 95,
+      'Color profundo con pigmentos de maíz morado. Hidrata y protege los labios con antioxidantes naturales.',
+    details: 'Acabado satinado, con un toque suave que no reseca. Perfecto para un look elegante de día o noche.',
+    ingredients: 'Maíz morado, aceite de ricino, manteca de cacao, vitamina E.',
+    price: 45,
     currency: 'S/',
     region: 'Andes',
-    image: '/images/hero-bg.jpg',
+    image: labialMorado,
   },
   {
-    id: 'balsamo-lucuma',
-    name: 'Bálsamo de Lúcuma',
+    id: 'trazo-violeta',
+    name: 'Trazo Violeta',
+    subtitle: 'Delineador de Maíz Morado',
     description:
-      'Bálsamo multiuso para labios y mejillas con manteca de lúcuma. Aporta un tono cálido y natural.',
-    price: 38,
+      'Delineador rico en antioxidantes de maíz morado y vitamina E. Asegura un trazo preciso y definido.',
+    details: 'Resistente al sudor y de fácil difuminado para looks intensos o suaves.',
+    ingredients: 'Maíz morado, cera de carnauba, aceite de argán, vitamina E.',
+    price: 40,
+    currency: 'S/',
+    region: 'Amazonía',
+    image: delineadorMorado,
+  },
+  {
+    id: 'trazo-verde',
+    name: 'Trazo Verde',
+    subtitle: 'Delineador de Hierbas Andinas',
+    description:
+      'Delineador herbal con extractos de hoja verde y antioxidantes. Define la mirada mientras protege la piel.',
+    details: 'Textura suave que se desliza sin arrastrar y mantiene la intensidad durante horas.',
+    ingredients: 'Extracto de hoja verde, cera de carnauba, aceite de girasol, manteca de karité.',
+    price: 40,
+    currency: 'S/',
+    region: 'Andes',
+    image: delineadorVerde,
+  },
+  {
+    id: 'aura-naranja',
+    name: 'Aura Naranja',
+    subtitle: 'Blush Iluminador',
+    description:
+      'Rubor iluminador con polvo de cáscara de naranja y arcilla volcánica. Aporta un brillo saludable y natural.',
+    details: 'Textura ligera y modulable, ideal para mejillas y pómulos con acabado radiante.',
+    ingredients: 'Arcilla volcánica, polvo de cáscara de naranja, aceite de semilla de uva, mica natural.',
+    price: 35,
     currency: 'S/',
     region: 'Costa',
-    image: '/images/colaboradora.jpg',
+    image: blushNaranja,
   },
   {
-    id: 'mascarilla-arcilla',
-    name: 'Mascarilla Arcilla Andina',
+    id: 'aura-rosa',
+    name: 'Aura Rosa',
+    subtitle: 'Gloss Labial',
     description:
-      'Arcilla volcánica purificante con hierbas medicinales de Cusco. Limpia poros y equilibra la piel grasa.',
+      'Gloss hidratante con pigmentos suaves y brillo duradero. Hidrata los labios sin sensación pegajosa.',
+    details: 'Aporta un tono rosado natural con una sensación ligera y fresca.',
+    ingredients: 'Aceite de jojoba, extracto de pétalo de rosa, manteca de cacao, vitamina E.',
+    price: 35,
+    currency: 'S/',
+    region: 'Andes',
+    image: glossRojo,
+  },
+  {
+    id: 'nectar-coral',
+    name: 'Nectar Coral',
+    subtitle: 'Blush Coral',
+    description:
+      'Polvo compacto con notas corales inspiradas en la flora peruana. Aporta calidez y frescura al rostro.',
+    details: 'Fácil de difuminar y perfecto para pieles claras o medias que buscan un tono natural.',
+    ingredients: 'Mica, extracto de coral, óleo de rosa mosqueta, almidón de maíz.',
+    price: 40,
+    currency: 'S/',
+    region: 'Andes',
+    image: blushMorado,
+  },
+  {
+    id: 'paleta-carnaval',
+    name: 'Paleta Carnaval',
+    subtitle: 'Paleta de Sombras',
+    description:
+      'Paleta con tonos vibrantes y versátiles inspirados en las celebraciones andinas. Mezcla mates y destellos.',
+    details: 'Incluye colores cálidos y fríos para crear looks de día y de noche con textura cremosa.',
+    ingredients: 'Mica, óxidos minerales, aceite de semilla de albaricoque, extracto de quinoa.',
     price: 55,
     currency: 'S/',
     region: 'Andes',
-    image: '/images/productores.jpg',
+    image: lienzoCarnaval,
   },
 ]
 

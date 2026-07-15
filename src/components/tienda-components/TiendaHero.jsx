@@ -10,7 +10,17 @@ export default function TiendaHero() {
           <span className="tienda-hero__eyebrow">Alta cosmética ancestral</span>
           <h1 className="tienda-hero__title">Elixir de los Andes</h1>
           <div className="tienda-hero__actions">
-            <a href="#tienda/catalogo" className="btn btn--burgundy">
+            <a
+              href="#"
+              className="btn btn--burgundy"
+              onClick={(e) => {
+                e.preventDefault()
+                document.getElementById('catalogo')?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                })
+              }}
+            >
               Explorar colección
             </a>
             <a href="#sobre-nosotros" className="btn btn--outline">

@@ -67,7 +67,7 @@ export default function ProductCatalog() {
             {filtered.map((product) => (
               <article key={product.id} className="catalog__card">
                 <div className="catalog__image-wrap">
-                  <img src={product.image} alt={product.name} className="catalog__image" />
+                  <div style={{ backgroundImage: `url(${product.image})` }} alt={product.name} className="catalog__image" />
                   <span className="catalog__region">{product.region}</span>
                 </div>
                 <div className="catalog__body">

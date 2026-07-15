@@ -18,7 +18,6 @@ export default function SobreNosotrosPage() {
   return (
     <>
       <AboutIntro />
-      <AboutNav />
       <Mission />
       <Vision />
       <Colaboradores />

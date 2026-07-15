@@ -3,28 +3,34 @@ import './Equipo.scss'
 const members = [
   {
     image: '/images/colaboradora.jpg',
-    name: 'Camila Rojas',
-    role: 'Fundadora & CEO',
+    name: 'Alonso Castro',
+    role: 'Lider',
     bio: 'Emprendedora limeña apasionada por conectar la cosmética de lujo con la riqueza botánica del Perú.',
   },
   {
     image: '/images/productores.jpg',
-    name: 'Andrés Quispe',
-    role: 'Director de Operaciones',
+    name: 'Santiago Quispe',
+    role: 'Evaluador',
     bio: 'Especialista en cadenas de suministro éticas con más de 10 años trabajando con comunidades rurales.',
   },
   {
     image: '/images/peru-piel.jpg',
-    name: 'Valentina Mendoza',
-    role: 'Jefa de Formulación',
+    name: 'Fernando Bullon',
+    role: 'Especialista en sostenibilidad',
     bio: 'Química cosmética dedicada a crear fórmulas limpias con ingredientes nativos de máxima calidad.',
   },
   {
     image: '/images/piloto.jpg',
-    name: 'Lucía Fernández',
-    role: 'Líder de Comunidad',
+    name: 'Alessandra Bustamante',
+    role: 'Temporizador',
     bio: 'Gestiona las alianzas con artesanos y productores, garantizando comercio justo en cada etapa.',
   },
+  {
+    image: '/images/colaboradora.jpg',
+    name: 'Eduardo Igarza',
+    role: 'Secretario',
+    bio: 'Emprendedora limeña apasionada por conectar la cosmética de lujo con la riqueza botánica del Perú.',
+  }
 ]
 
 export default function Equipo() {
