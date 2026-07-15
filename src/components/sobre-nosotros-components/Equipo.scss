@@ -38,8 +38,8 @@
   &__photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s;
+    background: no-repeat center center;
+    background-size: cover;
 
     .equipo__card:hover & {
       transform: scale(1.04);

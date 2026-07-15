@@ -1,8 +1,8 @@
 import { MapPin } from 'lucide-react'
 import './HistoriaStories.scss'
 import rosa from '../../assets/imagenes/campesino-achote.jpeg'
-import donJulian from '../../assets/imagenes/campesino-cacao.jpeg'
-import elena from '../../assets/imagenes/campesino-maiz.jpeg'
+import donJulian from '../../assets/imagenes/campesino-maiz.jpeg'
+import elena from '../../assets/imagenes/campesino-cacao.jpeg'
 import miguel from '../../assets/imagenes/campesino-quinua.jpeg'
 
 const stories = [

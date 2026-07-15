@@ -20,7 +20,7 @@ export const products = [
     ingredients: 'Achiote, cera de abejas, manteca de karité, aceite de jojoba.',
     price: 45,
     currency: 'S/',
-    region: 'Andes',
+    region: 'Amazonía',
     image: labialRojo,
   },
   {
@@ -46,7 +46,7 @@ export const products = [
     ingredients: 'Maíz morado, cera de carnauba, aceite de argán, vitamina E.',
     price: 40,
     currency: 'S/',
-    region: 'Amazonía',
+    region: 'Andes',
     image: delineadorMorado,
   },
   {
@@ -59,7 +59,7 @@ export const products = [
     ingredients: 'Extracto de hoja verde, cera de carnauba, aceite de girasol, manteca de karité.',
     price: 40,
     currency: 'S/',
-    region: 'Andes',
+    region: 'Costa',
     image: delineadorVerde,
   },
   {
@@ -72,7 +72,7 @@ export const products = [
     ingredients: 'Arcilla volcánica, polvo de cáscara de naranja, aceite de semilla de uva, mica natural.',
     price: 35,
     currency: 'S/',
-    region: 'Costa',
+    region: 'Amazonía',
     image: blushNaranja,
   },
   {
@@ -85,7 +85,7 @@ export const products = [
     ingredients: 'Aceite de jojoba, extracto de pétalo de rosa, manteca de cacao, vitamina E.',
     price: 35,
     currency: 'S/',
-    region: 'Andes',
+    region: 'Amazonía',
     image: glossRojo,
   },
   {
@@ -98,7 +98,7 @@ export const products = [
     ingredients: 'Mica, extracto de coral, óleo de rosa mosqueta, almidón de maíz.',
     price: 40,
     currency: 'S/',
-    region: 'Andes',
+    region: 'Amazonía',
     image: blushMorado,
   },
   {
@@ -111,7 +111,7 @@ export const products = [
     ingredients: 'Mica, óxidos minerales, aceite de semilla de albaricoque, extracto de quinoa.',
     price: 55,
     currency: 'S/',
-    region: 'Andes',
+    region: 'Amazonía',
     image: lienzoCarnaval,
   },
 ]

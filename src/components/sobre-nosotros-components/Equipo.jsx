@@ -1,32 +1,38 @@
 import './Equipo.scss'
+import Alonso from '../../assets/imagenes/alonso.jpg'
+import Santiago from '../../assets/imagenes/santiango.jpg'
+import Fernando from '../../assets/imagenes/fernando.jpg'
+import Alessandra from '../../assets/imagenes/alessandra.jpg'
+import Eduardo from '../../assets/imagenes/eduardo.jpg'
+
 
 const members = [
   {
-    image: '/images/colaboradora.jpg',
+    image: Alonso,
     name: 'Alonso Castro',
     role: 'Lider',
     bio: 'Emprendedora limeña apasionada por conectar la cosmética de lujo con la riqueza botánica del Perú.',
   },
   {
-    image: '/images/productores.jpg',
+    image: Santiago,
     name: 'Santiago Quispe',
     role: 'Evaluador',
     bio: 'Especialista en cadenas de suministro éticas con más de 10 años trabajando con comunidades rurales.',
   },
   {
-    image: '/images/peru-piel.jpg',
+    image: Fernando,
     name: 'Fernando Bullon',
     role: 'Especialista en sostenibilidad',
     bio: 'Química cosmética dedicada a crear fórmulas limpias con ingredientes nativos de máxima calidad.',
   },
   {
-    image: '/images/piloto.jpg',
+    image: Alessandra,
     name: 'Alessandra Bustamante',
     role: 'Temporizador',
     bio: 'Gestiona las alianzas con artesanos y productores, garantizando comercio justo en cada etapa.',
   },
   {
-    image: '/images/colaboradora.jpg',
+    image: Eduardo,
     name: 'Eduardo Igarza',
     role: 'Secretario',
     bio: 'Emprendedora limeña apasionada por conectar la cosmética de lujo con la riqueza botánica del Perú.',
@@ -47,7 +53,7 @@ export default function Equipo() {
           {members.map(({ image, name, role, bio }) => (
             <article key={name} className="equipo__card">
               <div className="equipo__photo-wrap">
-                <img src={image} alt={name} className="equipo__photo" />
+                <div style={{ backgroundImage: `url(${image})` }} className="equipo__photo" />
               </div>
               <div className="equipo__body">
                 <h3 className="equipo__name">{name}</h3>

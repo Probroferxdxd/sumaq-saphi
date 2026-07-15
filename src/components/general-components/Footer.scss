@@ -259,13 +259,36 @@
   }
 
   @media (max-width: 480px) {
+    padding-top: 2.5rem;
+
+    &__support {
+      padding: 1.2rem;
+    }
+
+    &__support-btn {
+      align-self: flex-start;
+    }
+
     &__grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    &__form {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
 
     &__bottom {
       flex-direction: column;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__social {
+      flex-wrap: wrap;
+      gap: 0.9rem;
     }
   }
 }
