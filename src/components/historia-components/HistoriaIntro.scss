@@ -1,0 +1,26 @@
+.historia-intro {
+  padding: 6rem 0 4rem;
+}
+
+.historia-intro__header {
+  width: 100%;
+  color: #5c2831;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.historia-intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.historia-intro__text {
+  line-height: 1.85;
+  color: #5b4a4c;
+}

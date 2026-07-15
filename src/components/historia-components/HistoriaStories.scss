@@ -1,0 +1,80 @@
+.historia-stories {
+  padding-bottom: 3rem;
+}
+
+.historia-stories__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.historia-story {
+  background: #fff;
+  border: 1px solid rgba(94, 34, 48, 0.08);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(26, 30, 33, 0.06);
+}
+
+.historia-story__image {
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.historia-story__body {
+  padding: 1.75rem 1.75rem 2rem;
+}
+
+.historia-story__label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: #ffe6dc;
+  color: #ad3f2b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.historia-story__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.historia-story__name {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.historia-story__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8f6f6d;
+  font-size: 0.9rem;
+}
+
+.historia-story__quote {
+  margin: 1.25rem 0 0;
+  font-style: italic;
+  color: #8f304d;
+  line-height: 1.6;
+}
+
+.historia-story__description {
+  margin-top: 1rem;
+  color: #6f5d5f;
+  line-height: 1.85;
+}
+
+@media (max-width: 900px) {
+  .historia-stories__grid {
+    grid-template-columns: 1fr;
+  }
+}

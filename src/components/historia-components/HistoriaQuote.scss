@@ -1,0 +1,20 @@
+.historia-quote {
+  padding: 4rem 0 4.5rem;
+  background: #f9f3ee;
+}
+
+.historia-quote__container {
+  text-align: center;
+}
+
+.historia-quote__icon {
+  color: #9c3652;
+}
+
+.historia-quote__text {
+  margin-top: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  line-height: 1.2;
+  font-weight: 600;
+  color: #5c2831;
+}
