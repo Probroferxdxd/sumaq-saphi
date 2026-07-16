@@ -31,7 +31,7 @@ const stories = [
     location: 'Cusco',
     quote: 'Ellos venden lujo afuera, pero aquí el precio se queda en el suelo.',
     description:
-      'Elena se enfrenta a grandes corporaciones que compran su cacao nativo a precios ínfimos para luego revenderlo con un valor añadido inalcanzable para ella.',
+      'Miguel se enfrenta a grandes corporaciones que compran su cacao nativo a precios ínfimos para luego revenderlo con un valor añadido inalcanzable para ella.',
   },
   {
     image: miguel,
@@ -40,7 +40,7 @@ const stories = [
     location: 'Puno',
     quote: 'La quinua es el orgullo de Puno, pero el orgullo no paga las herramientas.',
     description:
-      'A Miguel le frustra que, pese al éxito mundial de la quinua, los costos de producción suben mientras el retorno directo al campesino sigue estancado.',
+      'A Elena le frustra que, pese al éxito mundial de la quinua, los costos de producción suben mientras el retorno directo al campesino sigue estancado.',
   },
 ]
 
@@ -49,10 +49,10 @@ export default function HistoriaStories() {
     <section className="historia-stories">
       <div className="container historia-stories__container">
         <div className="historia-stories__grid">
-          {stories.map((story) => (
+          {stories.map((story, index) => (
             <article key={story.name} className="historia-story">
               <div
-                className="historia-story__image"
+                className={`historia-story__image ${index === 1 || index === 3 ? 'historia-story__image--top' : ''}`}
                 style={{ backgroundImage: `url(${story.image})` }}
               />
               <div className="historia-story__body">

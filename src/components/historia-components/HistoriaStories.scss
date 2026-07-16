@@ -15,11 +15,14 @@
   overflow: hidden;
   box-shadow: 0 24px 80px rgba(26, 30, 33, 0.06);
 }
-
 .historia-story__image {
-  min-height: 260px;
+  min-height: 360px;
   background-size: cover;
   background-position: center;
+}
+
+.historia-story__image--top {
+  background-position: top;
 }
 
 .historia-story__body {

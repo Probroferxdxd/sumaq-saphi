@@ -11,31 +11,31 @@ const members = [
     image: Alonso,
     name: 'Alonso Castro',
     role: 'Lider',
-    bio: 'Emprendedora limeña apasionada por conectar la cosmética de lujo con la riqueza botánica del Perú.',
+    bio: 'Futuro ingeniero con capacidad de liderazgo y oratoria, preparado para todo',
   },
   {
     image: Santiago,
     name: 'Santiago Quispe',
     role: 'Evaluador',
-    bio: 'Especialista en cadenas de suministro éticas con más de 10 años trabajando con comunidades rurales.',
+    bio: 'Futuro economísta y habil en voley',
   },
   {
     image: Fernando,
     name: 'Fernando Bullon',
     role: 'Especialista en sostenibilidad',
-    bio: 'Química cosmética dedicada a crear fórmulas limpias con ingredientes nativos de máxima calidad.',
+    bio: 'Futuro Ingeniero de Software listo para la hackaton',
   },
   {
     image: Alessandra,
     name: 'Alessandra Bustamante',
     role: 'Temporizador',
-    bio: 'Gestiona las alianzas con artesanos y productores, garantizando comercio justo en cada etapa.',
+    bio: 'Armadora de rompecabezas y futura ingeniera de software con gran capacidad de liderazgo',
   },
   {
     image: Eduardo,
     name: 'Eduardo Igarza',
     role: 'Secretario',
-    bio: 'Emprendedora limeña apasionada por conectar la cosmética de lujo con la riqueza botánica del Perú.',
+    bio: 'Futuro cocinero con iniciativa y resiliencia ante la adversidad',
   }
 ]
 
@@ -52,9 +52,6 @@ export default function Equipo() {
         <div className="equipo__grid">
           {members.map(({ image, name, role, bio }) => (
             <article key={name} className="equipo__card">
-              <div className="equipo__photo-wrap">
-                <div style={{ backgroundImage: `url(${image})` }} className="equipo__photo" />
-              </div>
               <div className="equipo__body">
                 <h3 className="equipo__name">{name}</h3>
                 <span className="equipo__role">{role}</span>

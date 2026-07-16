@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { motion } from 'framer-motion'
 import { Search } from 'lucide-react'
 import { products, REGIONS } from '../../data/products'
 import { openConfirmWindow } from '../../utils/checkout'
@@ -64,8 +65,15 @@ export default function ProductCatalog() {
           </p>
         ) : (
           <div className="catalog__grid">
-            {filtered.map((product) => (
-              <article key={product.id} className="catalog__card">
+            {filtered.map((product, index) => (
+              <motion.article
+                key={product.id}
+                className="catalog__card"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+              >
                 <div className="catalog__image-wrap">
                   <div style={{ backgroundImage: `url(${product.image})` }} alt={product.name} className="catalog__image" />
                   <span className="catalog__region">{product.region}</span>
@@ -89,7 +97,7 @@ export default function ProductCatalog() {
                     </button>
                   </div>
                 </div>
-              </article>
+              </motion.article>
             ))}
           </div>
         )}

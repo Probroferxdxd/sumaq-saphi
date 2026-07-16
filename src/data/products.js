@@ -86,7 +86,7 @@ export const products = [
     price: 35,
     currency: 'S/',
     region: 'Amazonía',
-    image: glossRojo,
+    image: blushMorado,
   },
   {
     id: 'nectar-coral',
@@ -99,7 +99,7 @@ export const products = [
     price: 40,
     currency: 'S/',
     region: 'Amazonía',
-    image: blushMorado,
+    image: glossRojo,
   },
   {
     id: 'paleta-carnaval',

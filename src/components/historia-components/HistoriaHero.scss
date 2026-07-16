@@ -1,0 +1,87 @@
+@use '../../styles/variables' as *;
+
+.historia-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(46, 77, 57, 0.9) 0%, rgba(92, 40, 49, 0.78) 100%);
+  padding-top: 5rem;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    padding-block: 4rem 8rem;
+  }
+
+  &__title {
+    font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+    color: $white;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+    z-index: 1;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  @media (max-width: 600px) {
+    min-height: 90svh;
+    padding-top: 4rem;
+
+    &__content {
+      max-width: 100%;
+      padding-block: 2.5rem 4.5rem;
+    }
+
+    &__title {
+      font-size: clamp(1.75rem, 8vw, 2.4rem);
+      margin-bottom: 1.25rem;
+    }
+
+    &__actions {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &__scroll {
+      bottom: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
